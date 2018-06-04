@@ -91,3 +91,5 @@ C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\obj\Debug\Vidly.
 C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.test.resources
 C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.test2.resources
 C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddNullableBirthdateToCustomer.resources
+C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddNewFieldsToMovieModel.resources
+C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateGenres.resources

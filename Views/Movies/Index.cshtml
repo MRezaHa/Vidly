@@ -1,17 +1,19 @@
-﻿@model Vidly.ViewModels.MoviesViewModel
+﻿@model IEnumerable<Vidly.Models.Movie>
 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>
-    @Model.Movie.Name 
+    Movies
 </h2>
 
 <table class="table table-bordered table-hover">
-    @foreach (var customer in @Model.Customers)
+    <tr> <th style="text-align: center"> Movie </th>        <th style="text-align: center"> Genre </th> </tr>
+
+    @foreach (var movie in @Model)
     {
-        <tr> <th>@customer.Id</th> <td>@customer.Name</td> </tr>
+        <tr> <th style="text-align: center"> <a href="Movies/Details/@movie.Id"> @movie.Name </a> </th> <td style="text-align: center">@movie.Genre.Name</td> </tr>
     }
 </table>
 

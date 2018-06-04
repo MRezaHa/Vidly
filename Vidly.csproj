@@ -243,9 +243,18 @@
     <Compile Include="Migrations\201806021232167_AddNullableBirthdateToCustomer.Designer.cs">
       <DependentUpon>201806021232167_AddNullableBirthdateToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806041240313_AddNewFieldsToMovieModel.cs" />
+    <Compile Include="Migrations\201806041240313_AddNewFieldsToMovieModel.Designer.cs">
+      <DependentUpon>201806041240313_AddNewFieldsToMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806041245029_PopulateGenres.cs" />
+    <Compile Include="Migrations\201806041245029_PopulateGenres.Designer.cs">
+      <DependentUpon>201806041245029_PopulateGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -320,6 +329,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -362,6 +372,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806021232167_AddNullableBirthdateToCustomer.resx">
       <DependentUpon>201806021232167_AddNullableBirthdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806041240313_AddNewFieldsToMovieModel.resx">
+      <DependentUpon>201806041240313_AddNewFieldsToMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806041245029_PopulateGenres.resx">
+      <DependentUpon>201806041245029_PopulateGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
