@@ -1,0 +1,17 @@
+﻿@model Vidly.ViewModels.MoviesViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    @Model.Movie.Name 
+</h2>
+
+<table class="table table-bordered table-hover">
+    @foreach (var customer in @Model.Customers)
+    {
+        <tr> <th>@customer.Id</th> <td>@customer.Name</td> </tr>
+    }
+</table>
+
