@@ -8,12 +8,16 @@
     Movies
 </h2>
 
+<button type="button" class="btn" onclick="var NewMovie = function () { window.location = 'Movies/NewMovie' }; NewMovie()">NEW MOVIE</button>
+
 <table class="table table-bordered table-hover">
     <tr> <th style="text-align: center"> Movie </th>        <th style="text-align: center"> Genre </th> </tr>
 
     @foreach (var movie in @Model)
     {
-        <tr> <th style="text-align: center"> <a href="Movies/Details/@movie.Id"> @movie.Name </a> </th> <td style="text-align: center">@movie.Genre.Name</td> </tr>
+        <tr> <th style="text-align: center"> <a href="Movies/EditMovie/@movie.Id"> @movie.Name </a> </th> <td style="text-align: center">@movie.Genre.Name</td> </tr>
     }
 </table>
+
+
 
