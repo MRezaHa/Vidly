@@ -64,6 +64,7 @@ namespace Vidly.Controllers
         {
             if (movie.Id == 0)
             {
+                movie.Genre = _context.Genres.SingleOrDefault(m => m.Id == movie.GenreId); ////////////////////
                 _context.Movies.Add(movie);
             }
 
@@ -73,6 +74,7 @@ namespace Vidly.Controllers
 
                 movieInDb.Name = movie.Name;
                 movieInDb.GenreId = movie.GenreId;
+                movieInDb.Genre = _context.Genres.SingleOrDefault(m => m.Id == movieInDb.GenreId); //////////////////// pas fayede tarif karadan genre chie ? // hatman bayad dorost beshe choon moshkel performance ijad misavad, choon bayad yek darkhast be db bezanad
                 movieInDb.NumberInStock = movie.NumberInStock;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.AddedDate = movie.AddedDate;
