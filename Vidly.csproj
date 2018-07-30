@@ -251,6 +251,14 @@
     <Compile Include="Migrations\201806041245029_PopulateGenres.Designer.cs">
       <DependentUpon>201806041245029_PopulateGenres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807300603145_SetReqierdToMovieModelProperties.cs" />
+    <Compile Include="Migrations\201807300603145_SetReqierdToMovieModelProperties.Designer.cs">
+      <DependentUpon>201807300603145_SetReqierdToMovieModelProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807300631556_AddRangeToNumberInStuckFieldInMovieModel.cs" />
+    <Compile Include="Migrations\201807300631556_AddRangeToNumberInStuckFieldInMovieModel.Designer.cs">
+      <DependentUpon>201807300631556_AddRangeToNumberInStuckFieldInMovieModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -379,6 +387,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806041245029_PopulateGenres.resx">
       <DependentUpon>201806041245029_PopulateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807300603145_SetReqierdToMovieModelProperties.resx">
+      <DependentUpon>201807300603145_SetReqierdToMovieModelProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807300631556_AddRangeToNumberInStuckFieldInMovieModel.resx">
+      <DependentUpon>201807300631556_AddRangeToNumberInStuckFieldInMovieModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
