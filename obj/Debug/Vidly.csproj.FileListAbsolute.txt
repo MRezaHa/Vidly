@@ -95,3 +95,11 @@ C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\obj\Debug\Vidly.
 C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateGenres.resources
 C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.SetReqierdToMovieModelProperties.resources
 C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddRangeToNumberInStuckFieldInMovieModel.resources
+C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\bin\System.Net.Http.Formatting.dll
+C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\bin\System.Web.Http.dll
+C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
+C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
+C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\bin\System.Web.Http.xml
+C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
+C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\bin\AutoMapper.dll
+C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\bin\AutoMapper.xml
