@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System;
+using AutoMapper;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -23,25 +24,25 @@ namespace Vidly.Controllers.Api
         }
 
         // Get /api/movies/id
-        public MovieDto GetMovie(int id)
+        public IHttpActionResult GetMovie(int id)
         {
             var movie = _context.Movies.SingleOrDefault(m => m.Id.Equals(id));
 
             if (movie == null)
             {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                return NotFound();
             }
 
-            return Mapper.Map<Movie, MovieDto>(movie);
+            return Ok(Mapper.Map<Movie, MovieDto>(movie));
         }
 
         // Post /api/movies
         [HttpPost]
-        public MovieDto CreateMovie(MovieDto movieDto)
+        public IHttpActionResult CreateMovie(MovieDto movieDto)
         {
             if (!ModelState.IsValid)
             {
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return BadRequest();
             }
 
             var movie = Mapper.Map<MovieDto, Movie>(movieDto);
@@ -51,7 +52,7 @@ namespace Vidly.Controllers.Api
 
             movieDto.Id = movie.Id;
 
-            return movieDto;
+            return Created(new Uri(Request.RequestUri + "/" + movie.Id), movieDto);
         }
 
         // PUT /api/movies
