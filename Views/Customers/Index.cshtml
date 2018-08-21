@@ -7,7 +7,7 @@
 
 <h2>The Customers List :</h2>
 
-<table class="table table-bordered table-hover">
+<table id="customers" class="table table-bordered table-hover">
    
 
     @if (!Model.Any())
@@ -21,6 +21,8 @@
         <tr>
             <th  style="text-align: center" >Customer</th>
             <th style="text-align: center" >Discount Rate</th>
+            <th style="text-align: center">Delete</th>
+
         </tr>
         </thead>
 
@@ -29,6 +31,9 @@
             <tr style="text-align: center">
                 <th style="text-align: center"> <a href="Customers/Details/@customer.Id"> @customer.Name </a> </th>
                 <td> @customer.MembershipType.Name </td>
+                <td>
+                     <button class="btn-link js-delete" >Delete</button>
+                </td>
             </tr>
 
         }
