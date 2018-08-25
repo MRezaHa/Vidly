@@ -26,9 +26,7 @@ namespace Vidly.Controllers
         public ActionResult Index()
         {
 
-            var movies = _context.Movies.Include(mov => mov.Genre).ToList();
-
-            return View(movies);
+            return View();
         }
 
         [Route("Movies/EditMovie/{id}")]

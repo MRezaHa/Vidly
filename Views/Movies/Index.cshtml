@@ -8,32 +8,49 @@
     Movies
 </h2>
 
-<button type="button" class="btn" onclick="var NewMovie = function () { window.location = 'Movies/NewMovie' }; NewMovie()">NEW MOVIE</button>
+<button style="margin-bottom: 20px" type="button" class="btn" onclick="var NewMovie = function () { window.location = 'Movies/NewMovie' }; NewMovie()">NEW MOVIE</button>
 
 <table id="movies" class="table table-bordered table-hover" style="margin-top: 15px">
-    <tr>
-        <th style="text-align: center"> Movie </th>
-        <th style="text-align: center"> Genre </th>
-        <th style="text-align: center">Delete</th>
-    </tr>
-
-    @foreach (var movie in @Model)
-    {
+    <thead>
         <tr>
-            <th style="text-align: center"> <a href="Movies/EditMovie/@movie.Id"> @movie.Name </a> </th>
-            <td style="text-align: center">@movie.Genre.Name</td>
-            <td style="text-align: center">
-                <button data-movie-id="@movie.Id" class="btn-link js-delete">Delete</button>
-            </td>
+            <th style="text-align: center"> Movie </th>
+            <th style="text-align: center"> Genre </th>
+            <th style="text-align: center">Delete</th>
         </tr>
-    }
+    </thead>
+
 </table>
 
 @section scripts
 {
     <script>
-        $(document).ready(function() {
-            $("#movies .js-delete").on("click", function() {
+        $(document).ready(function () {
+            $("#movies").DataTable({
+                ajax: {
+                    url: "api/movies",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name",
+                        render: function(data, type, movie) {
+                            return "<a href='/movies/edit/" + movie.id + "'>" + data + "</a>";
+                        }
+                    },
+                    {
+                        data: "genreDto.name"
+                    },
+                    {
+                        data: "id",
+                        render: function(data) {
+                            return "<button class='btn-link js-delete' data-movie-id='" + data + "'> Delete </button>";
+                        }
+                    }
+                ]
+
+            }); 
+
+            $("#movies").on("click", ".js-delete", function() {
                 var button = $(this);
                 bootbox.confirm("Are you sure you want to delete this movie?", function(result) {
                     if (result) {

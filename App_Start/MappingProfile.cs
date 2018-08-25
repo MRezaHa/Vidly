@@ -8,8 +8,17 @@ namespace Vidly.App_Start
     {
         public MappingProfile()
         {
-            Mapper.CreateMap<Movie, MovieDto>();
+            // Domain To Dto
+            Mapper.CreateMap<Movie, MovieDto>().ForMember(
+              Dest => Dest.GenreDto,
+              opt => opt.MapFrom(src => src.Genre));
+
+            Mapper.CreateMap<Genre, GenreDto>();
+
+
+            // Dto To Domain  
             Mapper.CreateMap<MovieDto, Movie>().ForMember(m => m.Id, opt => opt.Ignore());
+
         }
     }
 }
