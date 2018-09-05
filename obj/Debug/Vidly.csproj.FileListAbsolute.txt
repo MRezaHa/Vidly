@@ -104,3 +104,4 @@ C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\bin\System.Web.H
 C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\bin\AutoMapper.dll
 C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\bin\AutoMapper.xml
 C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.SeedUsers.resources
+C:\Users\Reza\documents\visual studio 2015\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddDrivingLicenseToApplicationUser.resources

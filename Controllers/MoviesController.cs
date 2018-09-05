@@ -25,8 +25,9 @@ namespace Vidly.Controllers
         [Route("Movies")]
         public ActionResult Index()
         {
-
-            return View();
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
+            return View("ReadOnlyList");
         }
 
         [Route("Movies/EditMovie/{id}")]
@@ -42,6 +43,7 @@ namespace Vidly.Controllers
         }
 
         [Route("Movies/NewMovie")]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult NewMovie()
         {
             var movie = new Movie()
